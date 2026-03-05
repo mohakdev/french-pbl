@@ -1,12 +1,11 @@
 import React from 'react';
-import { useParams, useNavigate, Link } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext';
 import { innovations } from '../data/innovations';
 import '../styles/innovation-detail.css';
 
 const InnovationDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
-  const navigate = useNavigate();
   const { language } = useLanguage();
 
   const innovation = innovations.find(i => i.id === id);
