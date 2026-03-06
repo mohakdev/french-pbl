@@ -8,7 +8,7 @@ const LandingPage: React.FC = () => {
 
   const content = {
     fr: {
-      title: 'France Innovatrice',
+      title: 'Innovative France',
       subtitle: 'Découvrez les innovations technologiques qui ont façonné le monde',
       cta: 'Explorer la Chronologie',
       description: 'La France a contribué à d\'innombrables innovations technologiques qui ont transformé l\'humanité. De la montgolfière aux rayons X, explorez les génies qui ont changé le cours de l\'histoire.',
@@ -39,6 +39,7 @@ const LandingPage: React.FC = () => {
     <div className="landing-container">
       {/* Hero Section */}
       <section className="hero">
+        <div className="hero-background-overlay"></div>
         <div className="hero-content">
           <h1 className="hero-title">{texts.title}</h1>
           <p className="hero-subtitle">{texts.subtitle}</p>
@@ -46,12 +47,6 @@ const LandingPage: React.FC = () => {
             {texts.cta}
             <span className="cta-arrow">→</span>
           </Link>
-        </div>
-        <div className="hero-background">
-          <div className="hero-glow"></div>
-          <div className="hero-blob blob-1"></div>
-          <div className="hero-blob blob-2"></div>
-          <div className="hero-blob blob-3"></div>
         </div>
       </section>
 

@@ -54,17 +54,25 @@ const InnovationDetail: React.FC = () => {
 
   return (
     <div className="innovation-detail-container">
-      {/* Hero Section */}
+      {/* Hero Section with Image */}
       <div className="detail-hero" style={{ borderTopColor: categoryColors[innovation.category] }}>
-        <Link to="/timeline" className="back-button">
-          ← {language === 'fr' ? 'Retour' : 'Back'}
-        </Link>
-        <h1 className="detail-title">{title}</h1>
-        <div className="detail-meta">
-          <span className="year">{innovation.year}</span>
-          <span className="category" style={{ backgroundColor: categoryColors[innovation.category] }}>
-            {categoryLabel}
-          </span>
+        {innovation.image && (
+          <div className="hero-image-wrapper">
+            <img src={innovation.image} alt={title} className="hero-image" />
+            <div className="hero-image-overlay"></div>
+          </div>
+        )}
+        <div className="hero-content-wrapper">
+          <Link to="/timeline" className="back-button">
+            ← {language === 'fr' ? 'Retour' : 'Back'}
+          </Link>
+          <h1 className="detail-title">{title}</h1>
+          <div className="detail-meta">
+            <span className="year">{innovation.year}</span>
+            <span className="category" style={{ backgroundColor: categoryColors[innovation.category] }}>
+              {categoryLabel}
+            </span>
+          </div>
         </div>
       </div>
 

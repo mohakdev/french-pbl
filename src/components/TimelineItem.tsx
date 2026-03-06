@@ -27,12 +27,19 @@ const TimelineItem: React.FC<TimelineItemProps> = ({ innovation, isLeft }) => {
       <div className="timeline-marker" style={{ backgroundColor: categoryColors[innovation.category] }}></div>
       <div className="timeline-content">
         <div className="timeline-card">
-          <span className="timeline-year">{innovation.year}</span>
-          <h3 className="timeline-title">{title}</h3>
-          <p className="timeline-description">{description}</p>
-          <Link to={`/innovation/${innovation.id}`} className="timeline-link">
-            {language === 'fr' ? 'En savoir plus →' : 'Learn more →'}
-          </Link>
+          {innovation.image && (
+            <div className="timeline-image-wrapper">
+              <img src={innovation.image} alt={title} className="timeline-image" />
+            </div>
+          )}
+          <div className="timeline-card-content">
+            <span className="timeline-year">{innovation.year}</span>
+            <h3 className="timeline-title">{title}</h3>
+            <p className="timeline-description">{description}</p>
+            <Link to={`/innovation/${innovation.id}`} className="timeline-link">
+              {language === 'fr' ? 'En savoir plus →' : 'Learn more →'}
+            </Link>
+          </div>
         </div>
       </div>
     </div>
