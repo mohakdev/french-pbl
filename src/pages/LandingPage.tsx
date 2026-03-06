@@ -8,7 +8,7 @@ const LandingPage: React.FC = () => {
 
   const content = {
     fr: {
-      title: 'Innovative France',
+      title: 'France innovante',
       subtitle: 'Découvrez les innovations technologiques qui ont façonné le monde',
       cta: 'Explorer la Chronologie',
       description: 'La France a contribué à d\'innombrables innovations technologiques qui ont transformé l\'humanité. De la montgolfière aux rayons X, explorez les génies qui ont changé le cours de l\'histoire.',
