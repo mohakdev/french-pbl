@@ -80,20 +80,18 @@ const LandingPage: React.FC = () => {
               ? 'Explorez plus de 10 innovations technologiques qui ont révolutionné le monde'
               : 'Explore over 10 technological innovations that revolutionized the world'}
           </p>
-          <Link to="/timeline" className="cta-button">
+          {/* <Link to="/timeline" className="cta-button">
             {language === 'fr' ? 'Voir la Chronologie' : 'View Timeline'}
-          </Link>
+          </Link> */}
+          <p className='bold'>{language === 'fr' ? 'projet par' : 'Project by'}</p>
+          <ul className="team-list">
+            <li className='team-item'>Mohak Jain</li>
+            <li className='team-item'>Rishabh Raj</li>
+            <li className='team-item'>Ayush Kumar Pandey</li>
+            <li className='team-item'>Samir Gupta</li>
+          </ul>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="footer">
-        <p>
-          {language === 'fr'
-            ? '© 2024 France Innovatrice - Célébrant les contributions technologiques de la France'
-            : '© 2024 Innovative France - Celebrating France\'s technological contributions'}
-        </p>
-      </footer>
     </div>
   );
 };
